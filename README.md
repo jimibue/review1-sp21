@@ -5,3 +5,5 @@ test1 - should be able to go to localhost:3000 and see my component render
 
 task2 - JS REVIEW
 test2
+
+t - add input and button log value of input and clear input when clicked
