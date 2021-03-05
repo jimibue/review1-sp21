@@ -1,7 +1,10 @@
 import React, {useState} from 'react'
 
-const Foo = () => {
-    const [title, setTitle] = useState()
+const Foo = (props) => {
+    const {title: initTitleValue} = props
+
+    const [title, setTitle] = useState(initTitleValue)
+
     const handleClick = () =>{
         console.log(title)
         setTitle('')
@@ -11,7 +14,8 @@ const Foo = () => {
         <div>
             <h1>FOO</h1>
             <p>title</p>
-            <input value={title} 
+            <input 
+             value={title} 
              onChange={(e)=>setTitle(e.target.value)}
             />
             <button onClick={handleClick}>click me</button>
@@ -23,7 +27,7 @@ const App = () => {
     return (
         <> 
           <h1>App</h1>
-          <Foo />
+          <Foo title="init title"/>
           <Foo />
           <Foo />
           <Foo />
