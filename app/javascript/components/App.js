@@ -13,8 +13,12 @@ const App = () => {
         <> 
           <h1>App</h1>
           <Foo />
+          <Foo />
+          <Foo />
+          <Foo />
         </>
     )
 }
 
 export default App
+
